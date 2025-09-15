@@ -32,17 +32,19 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-a {
+.contact-buttons a {
   text-decoration: none;
   color: #0a84ff;
+  margin-left: 10px;
 }
 form {
   display: flex;
   flex-direction: column;
   margin: 15px;
 }
-input, select {
+input {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
@@ -66,12 +68,6 @@ button {
 <form id="contactForm">
 <input type="text" id="name" placeholder="Имя">
 <input type="text" id="value" placeholder="Apple ID / Телефон / Email">
-<select id="type">
-  <option value="facetime">FaceTime (видео)</option>
-  <option value="facetime-audio">FaceTime (аудио)</option>
-  <option value="sms">SMS</option>
-  <option value="mailto">Почта</option>
-</select>
 <button type="submit">Добавить контакт</button>
 </form>
 
@@ -85,7 +81,14 @@ function renderContacts(){
   list.innerHTML = '';
   contacts.forEach(c=>{
     const li = document.createElement('li');
-    li.innerHTML = `<span>${c.name}</span> <a href="${c.type}:${c.value}">Открыть</a>`;
+    li.innerHTML = `
+      <span>${c.name}</span>
+      <div class="contact-buttons">
+        <a href="facetime:${c.value}">FaceTime</a>
+        <a href="facetime-audio:${c.value}">Audio</a>
+        <a href="sms:${c.value}">SMS</a>
+        <a href="mailto:${c.value}">Email</a>
+      </div>`;
     list.appendChild(li);
   });
 }
@@ -94,9 +97,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
   e.preventDefault();
   const name = document.getElementById('name').value.trim();
   const value = document.getElementById('value').value.trim();
-  const type = document.getElementById('type').value;
   if(!name || !value) return;
-  contacts.push({name,value,type});
+  contacts.push({name,value});
   localStorage.setItem('contacts', JSON.stringify(contacts));
   renderContacts();
   this.reset();
