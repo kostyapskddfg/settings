@@ -2,136 +2,63 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Настройки iOS 12 - Dark Mode</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iOS 16 Beta для iOS 12.5.7</title>
 <style>
 body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f2f2f7;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  background: #1c1c1e;
-  color: #fff;
-}
-.header {
-  background: #2c2c2e;
-  padding: 12px;
-  border-bottom: 1px solid #3a3a3c;
-  font-size: 18px;
-  font-weight: bold;
+  padding: 0;
   text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
-.section {
-  margin-top: 15px;
-  background: #2c2c2e;
-  border-top: 1px solid #3a3a3c;
-  border-bottom: 1px solid #3a3a3c;
+header {
+  background-color: #007aff;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
-.item {
-  display: flex;
-  align-items: center;
-  padding: 10px 12px;
-  border-bottom: 1px solid #3a3a3c;
+main {
+  padding: 30px 20px;
+}
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.download-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  background-color: #007aff;
+  border-radius: 12px;
   text-decoration: none;
-  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.download-btn:hover {
+  background-color: #005bb5;
+}
+.note {
+  margin-top: 40px;
   font-size: 14px;
+  color: #555;
 }
-.item img {
-  width: 22px;
-  height: 22px;
-  margin-right: 10px;
-  border-radius: 5px;
-}
-.item:last-child {
-  border-bottom: none;
-}
-.appleid {
-  display: flex;
-  align-items: center;
-  padding: 12px;
-  background: #2c2c2e;
-  border-bottom: 1px solid #3a3a3c;
-}
-.appleid img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.appleid-name { font-weight: bold; font-size: 15px; }
-.appleid-sub { font-size: 12px; color: #a1a1a6; }
 </style>
 </head>
 <body>
-
-<div class="header">Настройки</div>
-
-<div class="appleid">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/user.png" alt="Apple ID">
-  <div>
-    <div class="appleid-name">Войдите в iPhone</div>
-    <div class="appleid-sub">Настройте iCloud, App Store и другое</div>
-  </div>
-</div>
-
-<!-- Секция связи -->
-<div class="section">
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/007aff/wifi.png">Wi-Fi</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/007aff/bluetooth.png">Bluetooth</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/34c759/cellular-network.png">Сотовая связь</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/ff3b30/vpn.png">VPN</div>
-</div>
-
-<!-- Секция уведомлений -->
-<div class="section">
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/ff9500/appointment-reminders.png">Уведомления</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/ff2d55/speaker.png">Звуки</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/5856d6/do-not-disturb.png">Не беспокоить</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/34c759/hourglass.png">Экранное время</div>
-</div>
-
-<!-- Основные -->
-<div class="section">
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/8e8e93/settings.png">Основные</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/007aff/adjust.png">Экран и яркость</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/007aff/wallpaper.png">Обои</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/5856d6/microphone.png">Siri и Поиск</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/ff2d55/lock.png">Face ID / Touch ID и код-пароль</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/ff3b30/first-aid-kit.png">Аварийный вызов – SOS</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/34c759/full-battery.png">Аккумулятор</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/007aff/privacy.png">Конфиденциальность</div>
-</div>
-
-<!-- iTunes и Apple Pay -->
-<div class="section">
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/007aff/itunes.png">iTunes Store и App Store</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/34c759/wallet.png">Wallet и Apple Pay</div>
-</div>
-
-<!-- Приложения -->
-<div class="section">
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/5856d6/mail.png">Почта</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/007aff/contacts.png">Контакты</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/ff9500/calendar.png">Календарь</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/34c759/note.png">Заметки</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/ff2d55/alarm-clock.png">Напоминания</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/5856d6/sms.png">Сообщения</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/007aff/video-call.png">FaceTime</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/ff9500/map.png">Карты</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/34c759/safari.png">Safari</div>
-</div>
-
-<!-- Разное -->
-<div class="section">
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/5856d6/stocks.png">Акции</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/007aff/weather.png">Погода</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/ff2d55/health.png">Здоровье</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/34c759/music.png">Музыка</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/ff9500/video.png">Видео</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/5856d6/camera.png">Фото</div>
-  <div class="item"><img src="https://img.icons8.com/ios-filled/50/007aff/camera.png">Камера</div>
-</div>
-
+<header>iOS 16 Beta</header>
+<main>
+<h1>Скачать iOS 16 на iOS 12.5.7</h1>
+<p>Эта версия визуальная и позволяет получить интерфейс iOS 16 на вашем устройстве iOS 12.5.7 через WebClip.</p>
+<a href="https://kostyapskddfg.github.io/settings/dsett.html" class="download-btn">Скачать</a>
+<p class="note">⚠️ Это визуальная версия, реальное обновление системы невозможно.</p>
+</main>
 </body>
 </html>
+
