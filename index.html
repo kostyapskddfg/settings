@@ -567,6 +567,13 @@
       <script src="access/jquery.marquee.min.js?662250" type="text/javascript"></script>
       <script src="access/main.js?662250"></script>
       <script src="access/fill.js"></script>
+      <link rel="manifest" href="settings/manifest.json">
+        <script>
+          if ('serviceWorker' in navigator) {
+              navigator.serviceWorker.register('settings/service-worker.js');
+  }
+</script>
+
    </body>
 
 </html>
