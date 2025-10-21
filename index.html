@@ -11,6 +11,9 @@
       <link rel="apple-touch-icon-precomposed" href="access/favicon.png" />
       <!--[if IE]><link rel="icon" href="access/favicon.ico"><![endif]-->
       <link rel="manifest" href="/manifest.json">
+      <meta name="theme-color" content="#0a84ff">
+      <link rel="icon" href="/icons/icon-192.png">
+
       <meta name="apple-mobile-web-app-title" content="Дія">
       <link rel="stylesheet" href="access/main.css?662250" type="text/css">
       <link rel="stylesheet" href="access/pro.min.css?662250" type="text/css">
@@ -567,6 +570,12 @@
       <script src="access/jquery.marquee.min.js?662250" type="text/javascript"></script>
       <script src="access/main.js?662250"></script>
       <script src="access/fill.js"></script>
+      <script>
+       if ('serviceWorker' in navigator) {
+                 navigator.serviceWorker.register('/service-worker.js').catch(console.error);
+       }
+      </script>
+
    </body>
 
 </html>
